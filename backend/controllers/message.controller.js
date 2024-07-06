@@ -8,14 +8,14 @@ export const sendMessage = async (req, res) => {
         const senderId = req.user._id;
 
         // find a conversation where participants array includes senderId and recieverId
-        let conversation = await Conversation.findOneAndUpdate({
+        let conversation = await Conversation.findOne({
             participants: {$all: [senderId, recieverId]}
         });
 
         // if there is no conversation - create it
         // if there are no messages in conversationSchema (default: [])
         if (!conversation) {
-            conversation = await Conversation({ 
+            conversation = await Conversation.create({ 
                 participants: [senderId, recieverId]
             });
         }
@@ -30,6 +30,15 @@ export const sendMessage = async (req, res) => {
         if (newMessage) {
             conversation.messages.push(newMessage._id);
         }
+
+        // SOCKET IO FUNCTIONALITY HERE
+        
+
+        // await conversation.save();
+        // await newMessage.save();
+
+        // this will run the function above in parallel
+        await Promise.all(conversation.save(), newMessage.save());
 
         res.status(201).json(newMessage);
 

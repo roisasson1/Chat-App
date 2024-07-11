@@ -8,7 +8,7 @@ import generateTokenAndSetCookie from '../utils/generateToken.js';
 
 export const signup = async (req, res) => {
     try {
-        const {fullName, username, password, confirmPassword, gender} = req.body;
+        const {fullname, username, password, confirmPassword, gender} = req.body;
 
         if (password !== confirmPassword)
         {
@@ -30,7 +30,7 @@ export const signup = async (req, res) => {
         const girlProfilePic = `https://avatar.iran.liara.run/public/girl?username=${username}`;
 
         const newUser = await User({
-            fullName,
+            fullname,
             username,
             password: hashedPassword,
             gender,
@@ -44,7 +44,7 @@ export const signup = async (req, res) => {
             await newUser.save(); // save user to db
             res.status(201).json({
                     _id: newUser._id,
-                    fullName: newUser.fullName,
+                    fullname: newUser.fullname,
                     username: newUser.username,
                     profilePic: newUser.profilePic
                 }

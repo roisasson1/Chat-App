@@ -96,8 +96,12 @@ const Signup = () => {
                     mt-2 inline-block'>Already have an account?</Link>
 
                     {/* signup button */}
+					{/* this button will be disalbed if loading=true */}
                     <div>
-                        <button className='btn btn-block btn-sm mt-2 bg-sky-200'>Sign Up</button>
+                        <button className='btn btn-block btn-sm mt-2 bg-sky-200'
+						disabled={loading}>
+							{loading ? <span className="loading loading-spinner"></span> : "Sign Up"}
+							</button>
                     </div>
 				</form>
 			</div>

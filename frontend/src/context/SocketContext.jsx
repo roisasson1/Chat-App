@@ -16,7 +16,7 @@ export const SocketContextProvider = ({ children }) => {
     // whenever the authUser changes, create a new socket connection or close the old one
     useEffect(() => {
         if (authUser) {
-            const socket = io('http://localhost:5000',{
+            const socket = io('https://chat-app-r4is.onrender.com/',{
                 query: { userId: authUser._id }  // pass the user-id to the socket
             })
             setSocket(socket); // set the socket state to this connection

@@ -11,6 +11,7 @@ import { useAuthContext } from "./context/AuthContext.jsx";
 // fix - add documentation in e.preventDefault(); as: we have to put it everytime
 // fix - messageContainer - show name of user in noChatSelected component
 // fix - error message in log chrome when 2 users connected
+// socket error in url - inside SocketContext line 19
 
 function App() {
   const {authUser} = useAuthContext();

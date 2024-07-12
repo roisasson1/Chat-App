@@ -9,6 +9,7 @@ import { useAuthContext } from "./context/AuthContext.jsx";
 // fix - a divider between conversations
 // fix - name of useConversation zustand hook
 // fix - add documentation in e.preventDefault(); as: we have to put it everytime
+// fix - messageContainer - show name of user in noChatSelected component
 
 function App() {
   const {authUser} = useAuthContext();

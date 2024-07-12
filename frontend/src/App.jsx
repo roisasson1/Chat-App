@@ -6,6 +6,10 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { useAuthContext } from "./context/AuthContext.jsx";
 
+// fix - a divider between conversations
+// fix - name of useConversation zustand hook
+// fix - add documentation in e.preventDefault(); as: we have to put it everytime
+
 function App() {
   const {authUser} = useAuthContext();
   return (

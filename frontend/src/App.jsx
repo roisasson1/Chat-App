@@ -10,6 +10,7 @@ import { useAuthContext } from "./context/AuthContext.jsx";
 // fix - name of useConversation zustand hook
 // fix - add documentation in e.preventDefault(); as: we have to put it everytime
 // fix - messageContainer - show name of user in noChatSelected component
+// fix - error message in log chrome when 2 users connected
 
 function App() {
   const {authUser} = useAuthContext();

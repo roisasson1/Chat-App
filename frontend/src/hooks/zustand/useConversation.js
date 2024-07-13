@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 
+
 const useConversation = create((set) => (
     // it's kind of useState with object syntax
     {selectedConversation: null,

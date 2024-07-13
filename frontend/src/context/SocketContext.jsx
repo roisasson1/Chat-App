@@ -1,6 +1,8 @@
 import { createContext, useState, useEffect, useContext } from "react";
-import { useAuthContext } from "./AuthContext";
 import io from "socket.io-client";
+
+import { useAuthContext } from "./AuthContext";
+
 
 const SocketContext = createContext();
 
@@ -16,7 +18,7 @@ export const SocketContextProvider = ({ children }) => {
     // whenever the authUser changes, create a new socket connection or close the old one
     useEffect(() => {
         if (authUser) {
-            const socket = io('https://chat-app-r4is.onrender.com/',{
+            const socket = io('http://localhost:5000',{
                 query: { userId: authUser._id }  // pass the user-id to the socket
             })
             setSocket(socket); // set the socket state to this connection

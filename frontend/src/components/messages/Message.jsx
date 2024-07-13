@@ -1,6 +1,7 @@
 import { useAuthContext } from "../../context/AuthContext";
-import useConversation from "../../zustand/useConversation";
+import useConversation from "../../hooks/zustand/useConversation";
 import { extractTime } from "../../utils/extractTime";
+
 
 const Message = ({message}) => {
   // check if the messsage is from us or from other user

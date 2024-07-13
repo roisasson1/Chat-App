@@ -1,11 +1,11 @@
-// in this file we save the consts of the pages we want to have
-// inside the consts we send requests to the server
-// for example, in sign-up we will have the JSON format with all the details of sign up
-
 import User from '../models/user.model.js';
 import bcrypt from "bcryptjs";
 import generateTokenAndSetCookie from '../utils/generateToken.js';
 
+
+// in this file we save the consts of the pages we want to have
+// inside the consts we send requests to the server
+// for example, in sign-up we will have the JSON format with all the details of sign up
 export const signup = async (req, res) => {
     try {
         const {fullname, username, password, confirmPassword, gender} = req.body;

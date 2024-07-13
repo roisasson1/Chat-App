@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
-import GenderCheckbox from "./GenderCheckbox";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
+import GenderCheckbox from "./GenderCheckbox";
 import useSignup from "../../hooks/useSignup.jsx";
+
 
 const Signup = () => {
 	const [inputs, setInputs] = useState({
@@ -19,6 +21,7 @@ const Signup = () => {
 	}
 
 	const handleSubmit = async (e) => {
+		// if event not get explicitly handled, default action should not be taken
 		e.preventDefault();
 		await signup(inputs);
 		console.log(inputs);

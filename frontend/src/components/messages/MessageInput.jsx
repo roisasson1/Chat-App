@@ -1,17 +1,21 @@
-import { BsSend } from 'react-icons/bs';
 import { useState } from 'react';
+import { BsSend } from 'react-icons/bs';
+
 import useSendMessage from '../../hooks/useSendMessage';
+
 
 const MessageInput = () => {
   const [message, setMessage] = useState('');
   const {loading, sendMessage } = useSendMessage(); // hook
 
   const handleSubmit = async (e) => {
+    // if event not get explicitly handled, default action should not be taken
     e.preventDefault();
 
     // if message is empty, do nothing
     if (!message) return;
-    await sendMessage(message);
+
+    await sendMessage(message); // send the message to the server
     setMessage(''); // clear the input field after sending the message
   }
 

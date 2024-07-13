@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import useLogin from '../../hooks/useLogin';
+
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -9,6 +11,7 @@ const Login = () => {
     const {loading, login} = useLogin();
 
     const handleSubmit = async (e) => {
+        // if event not get explicitly handled, default action should not be taken
         e.preventDefault();
         await login(username, password); // pass our inputs to login hook
         // If successful, redirect to dashboard page

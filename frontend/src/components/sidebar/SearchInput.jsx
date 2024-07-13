@@ -1,8 +1,10 @@
-import { IoSearchSharp } from "react-icons/io5";
 import { useState } from "react";
-import useConversation from "../../zustand/useConversation";
-import useGetConversations from "../../hooks/useGetConversations";
+import { IoSearchSharp } from "react-icons/io5";
 import toast from "react-hot-toast";
+
+import useConversation from "../../hooks/zustand/useConversation";
+import useGetConversations from "../../hooks/useGetConversations";
+
 
 const SearchInput = () => {
   const [search, setSearch] = useState('');
@@ -10,6 +12,7 @@ const SearchInput = () => {
   const { conversations } = useGetConversations();
 
   const handleSubmit = (e) => {
+    // if event not get explicitly handled, default action should not be taken
     e.preventDefault();
 
     if (!search) return;

@@ -1,10 +1,9 @@
-// JSON web token (JWT), pronounced "jot", is an open standard 
-// for securely transmitting information between parties as a JSON object.
-// the token is a short word which can be decoded to JSON file.
-// in this file we encode the user id into a token and save it in the cookie
-
 import jwt from 'jsonwebtoken';
 
+
+// JWT used for securely transmitting information between parties as a JSON object.
+// the token is a short word which can be decoded to JSON file.
+// in this file we encode the user id into a token and save it in the cookie
 const generateTokenAndSetCookie = (userId, res) => {
     const token = jwt.sign({userId}, process.env.JWT_SECRET, {
         expiresIn: '15d'

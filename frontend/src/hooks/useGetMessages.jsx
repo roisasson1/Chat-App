@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import toast from 'react-hot-toast';
-import useConversation from "../zustand/useConversation";
+
+import useConversation from "./zustand/useConversation";
+
 
 const useGetMessages = () => {
     const [loading, setLoading] = useState(false);

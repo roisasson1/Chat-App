@@ -13,6 +13,7 @@ import { useAuthContext } from "./context/AuthContext.jsx";
 // http://localhost:5000
 // https://chat-app-r4is.onrender.com/
 
+
 function App() {
   const {authUser} = useAuthContext();
   return (

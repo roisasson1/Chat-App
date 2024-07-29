@@ -1,5 +1,5 @@
 # ChatApp
-I built it with Express server connected to database in MongoDB.
+I built a full-stack web application with Express server connected to database in MongoDB.
 
 **Tech stack:** MERN + Socket.io + TailwindCSS + Daisy UI
 

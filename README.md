@@ -1,5 +1,5 @@
 # ChatApp
-**PRESS HERE -> https://chat-app-r4is.onrender.com/**
+**PRESS HERE TO VIEW WEBSITE -> https://chat-app-r4is.onrender.com/**
 
 I implemented and deployed a full-stack web application with Express server connected to database in MongoDB.
 

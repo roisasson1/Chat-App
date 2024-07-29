@@ -18,3 +18,6 @@ and immedietely send it back to this user. in this way this user didn't need to 
 **Global state management** with Zustand
 
 **Error handling** both on the server and on the client
+
+<img src="https://github.com/roisasson1/Chat-App/blob/main/home.jpg" width="800" height="500">
+<img src="https://github.com/roisasson1/Chat-App/blob/main/login.jpg" width="250" height="300">
